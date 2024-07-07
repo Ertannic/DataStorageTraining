@@ -28,10 +28,20 @@ final class RMTabViewController: UITabBarController {
         let episodesVC = RMEpisodeViewController()
         let settingsVC = RMSettingsViewController()
         
+        charactersVC.navigationItem.largeTitleDisplayMode = .automatic
+        locationsVC.navigationItem.largeTitleDisplayMode = .automatic
+        episodesVC.navigationItem.largeTitleDisplayMode = .automatic
+        settingsVC.navigationItem.largeTitleDisplayMode = .automatic
+
+         
         let charactersNav = UINavigationController(rootViewController: charactersVC)
         let locationsNav = UINavigationController(rootViewController: locationsVC)
         let episodesNav = UINavigationController(rootViewController: episodesVC)
         let settingsNav = UINavigationController(rootViewController: settingsVC)
+        
+        for nav in [charactersNav, locationsNav, episodesNav, settingsNav] {
+            nav.navigationBar.prefersLargeTitles = true
+        }
         
         setViewControllers(
             [charactersNav, locationsNav, episodesNav, settingsNav],
