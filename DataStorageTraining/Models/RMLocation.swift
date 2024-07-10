@@ -1,5 +1,5 @@
 //
-//  RMEpisode.swift
+//  RMLacation.swift
 //  DataStorageTraining
 //
 //  Created by Ertannic Saralay on 05.07.2024.
@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct RMEpisode: Codable {
+struct RMLocation: Codable {
     
-    let id: String
+    let id: Int
     let name: String
-    let air_date: String
-    let episode: String
-    let characters: [String]
+    let type: String
+    let dimension: String
+    let residents: [String]
     let url: String
     let created: String
     
